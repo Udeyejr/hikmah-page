@@ -1,0 +1,90 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f5e1e1, #e1f5e1);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    max-width: 90%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in;
+}
+
+h1 {
+    color: #c2185b;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    font-size: 1.1rem;
+    padding: 12px 24px;
+    border-radius: 25px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#yesBtn {
+    background-color: #28a745;
+    border: none;
+}
+
+#yesBtn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+#noBtn {
+    background-color: #dc3545;
+    border: none;
+    position: absolute;
+    transition: all 0.2s ease;
+}
+
+#noBtn:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+#successMessage {
+    display: none;
+    color: #c2185b;
+    font-size: 1.8rem;
+    font-weight: 600;
+    animation: bounceIn 0.8s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+    #successMessage {
+        font-size: 1.4rem;
+    }
+}
